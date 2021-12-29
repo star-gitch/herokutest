@@ -17,7 +17,7 @@ app.get("", (req,res) => {
 		  	pass: 'sona@smpl#123',
 		},
 	});
-	alert(transporter);
+
 	transporter.sendMail(
 	{
 		from: 'ivan.selyutin2020@gmail.com',
@@ -33,7 +33,7 @@ app.get("", (req,res) => {
 			console.log("to", 'p.star.p@yandex.com');
 		}
 	});
-	res.send(`Hello World Email!!! ${transporter}` );
+	res.send(`Hello World Email!!!` );
 });
 
 app.listen(PORT, ()=> {
