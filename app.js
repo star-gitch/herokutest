@@ -33,7 +33,7 @@ app.get("", (req,res) => {
 			console.log("to", 'p.star.p@yandex.com');
 		}
 	});
-	res.send(`Hello World Email!!!` );
+	res.send(transporter);
 });
 
 app.listen(PORT, ()=> {
