@@ -8,7 +8,7 @@ app.get("/", (req,res) => {
 	const transporter = nodemailer.createTransport({
 		host: 's11.cyberspaceindia.com',
 		port: 587,
-	 //  	secure: true, // use TLS
+	  	secure: true, // use TLS
 		// tls: {
 		//   	rejectUnauthorized: false,
 		// },
