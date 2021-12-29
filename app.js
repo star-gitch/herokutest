@@ -3,7 +3,7 @@ var nodemailer = require('nodemailer');
 
 const PORT = process.env.PORT || 3000;
 
-app.get("", (req,res) => {
+app.get("/", async (req,res) => {
 
 	const transporter = nodemailer.createTransport({
 		host: 's11.cyberspaceindia.com',
@@ -18,10 +18,10 @@ app.get("", (req,res) => {
 		},
 	});
 
-	transporter.sendMail(
+	await transporter.sendMail(
 	{
 		from: 'ivan.selyutin2020@gmail.com',
-		to: 'polyansofine@gmail.com',
+		to: 'p.star.p@yandex.com',
 		subject: 'nodemailer',
 		html: '<h1>Hello Nodemailer</h1>',
 	},
