@@ -3,24 +3,24 @@ var nodemailer = require('nodemailer');
 
 const PORT = process.env.PORT || 3000;
 
-app.get("/", async (req,res) => {
+app.get("/", (req,res) => {
 
 	const transporter = nodemailer.createTransport({
 		host: 's11.cyberspaceindia.com',
 		port: 587,
-	 //  	secure: true, // use TLS
-		// tls: {
-		//   	rejectUnauthorized: false,
-		// },
+	  	secure: true, // use TLS
+		tls: {
+		  	rejectUnauthorized: false,
+		},
 	  	auth: {
 		  	user: 'info1@sonamandhira.com',
 		  	pass: 'sona@smpl#123',
 		},
 	});
 
-	await transporter.sendMail(
+	transporter.sendMail(
 	{
-		from: 'ivan.selyutin2020@gmail.com',
+		from: 'info1@sonamandhira.com',
 		to: 'p.star.p@yandex.com',
 		subject: 'nodemailer',
 		html: '<h1>Hello Nodemailer</h1>',
