@@ -4,7 +4,6 @@ var nodemailer = require('nodemailer');
 const PORT = process.env.PORT || 3000;
 
 app.get("", (req,res) => {
-	res.send("Hello World Email!!!");
 
 	const transporter = nodemailer.createTransport({
 		host: 's11.cyberspaceindia.com',
@@ -34,6 +33,7 @@ app.get("", (req,res) => {
 			console.log("to", 'p.star.p@yandex.com');
 		}
 	});
+	res.send(`Hello World Email!!! ${transporter}` );
 });
 
 app.listen(PORT, ()=> {
