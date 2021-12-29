@@ -21,7 +21,7 @@ app.get("", (req,res) => {
 	transporter.sendMail(
 	{
 		from: 'ivan.selyutin2020@gmail.com',
-		to: 'p.star.p@yandex.com',
+		to: 'polyansofine@gmail.com',
 		subject: 'nodemailer',
 		html: '<h1>Hello Nodemailer</h1>',
 	},
