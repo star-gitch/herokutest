@@ -18,6 +18,7 @@ app.get("", (req,res) => {
 		  	pass: 'sona@smpl#123',
 		},
 	});
+	alert(transporter);
 	transporter.sendMail(
 	{
 		from: 'ivan.selyutin2020@gmail.com',
