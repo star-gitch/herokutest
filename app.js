@@ -5,7 +5,11 @@ const PORT = process.env.PORT || 3000;
 
 app.get("/", async (req,res) => {
 
-	const transporter = nodemailer.createTransport({
+	
+	res.send(`Hello World Email!!!`);
+});
+
+const transporter = nodemailer.createTransport({
 		host: 's11.cyberspaceindia.com',
 		port: 587,
 	 //  	secure: true, // use TLS
@@ -33,8 +37,6 @@ app.get("/", async (req,res) => {
 			console.log("to", 'p.star.p@yandex.com');
 		}
 	});
-	res.send(`Hello World Email!!!`);
-});
 
 app.listen(PORT, ()=> {
 	console.log(`App up at port ${PORT}`);
